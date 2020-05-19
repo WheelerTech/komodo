@@ -10,13 +10,6 @@ def my_home():
 def html_page(page_name):
     return render_template(page_name)
 
-def write_to_file(data):
-    with open('database.txt', mode='a') as database:
-        full_name = data["full_name"]
-        email = data["email"]
-        subject = data["subject"]
-        message = data["message"]
-        file = database.write(f'\n{full_name},{email},{subject},{message}')
 
 def write_to_csv(data):
     with open('database.csv', newline='', mode='a') as database2:
